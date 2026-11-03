@@ -4,15 +4,19 @@ while antal_domare < 3:
 poäng = 0
 svårighetsgrad = 0
 hopp=0
-while poäng >= 0 and svårighetsgrad >= 0:
+while True:
     hopp += 1
     min_poäng = 10
     max_poäng = 0
     summa_poäng = 0
     svårighetsgrad = float(input(f'Hopp {hopp}: Vilken svårighetsgrad?(skriv ett negativt tal för att avsluta):'))
+    if svårighetsgrad < 0:
+        break
     #samlar in domarpoängen
     for i in range(1,antal_domare + 1):
         domarpoäng = int(input(f'Domare {i}:s poäng:'))
+        if domarpoäng < 0:
+            exit()
         min_poäng = min(min_poäng, domarpoäng)
         max_poäng = max(max_poäng, domarpoäng)
         summa_poäng += domarpoäng
