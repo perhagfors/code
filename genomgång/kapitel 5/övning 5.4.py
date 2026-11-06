@@ -1,6 +1,7 @@
 konsonanter = 'bcdfghjklmnpqrstvxz'
 s = input('Skriv en text: ')
-ny_text = ''
+vokaler = 'aeiouyåäö'
+y_text = ''
 for text_bokstav in s:
     bokstav = text_bokstav.lower()
     if bokstav in konsonanter:
