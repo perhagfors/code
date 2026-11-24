@@ -5,3 +5,8 @@ for i in range(0,n):
     tabell.append([])
     for j in range(0,i+1):
         tabell[i].append((i+1)*(j+1))
+
+for i in range(0,n):
+    for j in range(0,i+1):
+        print(f'{tabell[i][j]:4}', end='')
+    print()
